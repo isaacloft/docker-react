@@ -9,6 +9,7 @@ CMD ["npm","run","build"]
 
 # run phrase
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
  
 # run the nginx server
